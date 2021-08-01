@@ -25,4 +25,9 @@ def even():
     print(f"Congratulations, {player_name}!!!")
 
 
-even()
+def main():
+    even()
+
+
+if __name__ == '__main__':
+    main()

@@ -1,18 +1,17 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "python-project-lvl1"
 version = "0.1.0"
 description = ""
-authors = ["Anton Rozhdestvensky <makefrontend@ya.ru>"]
+authors = ["Anton Rojdestvensky <makefrontend@ya.ru>"]
 packages = [
   { include = "brain_games" },
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 prompt = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^3.9.2"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
