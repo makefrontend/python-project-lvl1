@@ -1,4 +1,3 @@
-import operator
 from brain_games.cli import welcome_user
 from operator import mul, sub, add
 import random
@@ -7,6 +6,7 @@ import prompt
 
 NUMBERS_ROUND = 3
 OPERATIONS = ((add, '+'), (sub, '-'), (mul, '*'))
+
 
 def calc():
     user_name = welcome_user()
@@ -23,14 +23,15 @@ def calc():
             print('Correct!')
             count_round += 1
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'")
-            print(f"Let's try again, {user_name}")
+            print("'{}' is wrong answer ;(. Correct answer was '{}'. "
+                  "\nLet's try again, {}!".format(answer, result, user_name))
             return
     print(f'Congratulations, {user_name}!')
+
 
 def main():
     calc()
 
+
 if __name__ == '__main__':
     main()
-
