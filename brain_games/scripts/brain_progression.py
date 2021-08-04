@@ -41,7 +41,8 @@ def run_game_progression():
             count_round += 1
         else:
             print("'{}' is wrong answer ;(. Correct answer was '{}'. "
-                    "\nLet's try again, {}!".format(answer, progression[random_value], user_name))
+                  "\nLet's try again, {}!"
+                  .format(answer, progression[random_value], user_name))
             return
     print(f'Congratulations, {user_name}!')
 
@@ -52,4 +53,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
