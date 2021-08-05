@@ -3,7 +3,10 @@ import random
 import prompt
 
 
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 NUMBERS_ROUND = 3
+MIN_NUMBER = 1
+MAX_NUMBER = 20
 
 
 def get_gcd(num1, num2):
@@ -14,11 +17,11 @@ def get_gcd(num1, num2):
 
 def gcd():
     user_name = welcome_user()
-    print('Find the greatest common divisor of given numbers.')
+    print(GAME_DESCRIPTION)
     count_round = 0
     while count_round < NUMBERS_ROUND:
-        number_first = random.randrange(1, 20)
-        number_second = random.randrange(1, 20)
+        number_first = random.randrange(MIN_NUMBER, MAX_NUMBER)
+        number_second = random.randrange(MIN_NUMBER, MAX_NUMBER)
         print(f'Question: {number_first} {number_second}')
         answer = prompt.integer('Your answer: ')
         result = get_gcd(number_first, number_second)

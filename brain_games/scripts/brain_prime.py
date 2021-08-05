@@ -5,6 +5,7 @@ import prompt
 
 NUMBERS_ROUND = 3
 FIRST_PRIME_NUMBER = 2
+MAX_NUMBER = 50
 
 
 def is_prime(number):
@@ -19,7 +20,7 @@ def run_is_prime():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
     coint_round = 0
     while coint_round < NUMBERS_ROUND:
-        number = random.randint(2, 50)
+        number = random.randint(FIRST_PRIME_NUMBER, MAX_NUMBER)
         correct_answer = 'yes' if is_prime(number) else 'no'
         print(f"Question: {number}")
         answer = prompt.string('Your answer: ')

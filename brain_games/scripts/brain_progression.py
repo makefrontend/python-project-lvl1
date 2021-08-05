@@ -5,6 +5,12 @@ import prompt
 
 PROGRESSION_LENGHT = 10
 NUMBERS_ROUND = 3
+MIN_NUMBER = 1
+MAX_NUMBER = 20
+MIN_DIFFERENCE = 1
+MAX_DIFFERENCE = 10
+MIN_INDEX = 0
+MAX_INDEX = PROGRESSION_LENGHT - 1
 
 
 def get_progression(initial_value, difference):
@@ -29,9 +35,9 @@ def run_game_progression():
     print('What number is missing in the progression?')
     count_round = 0
     while count_round < NUMBERS_ROUND:
-        initial_value = random.randrange(1, 20)
-        difference = random.randrange(1, 10)
-        random_value = random.randrange(0, PROGRESSION_LENGHT - 1)
+        initial_value = random.randrange(MIN_NUMBER, MAX_NUMBER)
+        difference = random.randrange(MIN_DIFFERENCE, MAX_DIFFERENCE)
+        random_value = random.randrange(MIN_INDEX, MAX_INDEX)
         progression = get_progression(initial_value, difference)
         question = replace_value_from_progression(progression, random_value)
         print(f"Question: {question}")
