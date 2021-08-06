@@ -12,5 +12,5 @@ def is_even(number):
 
 def round_game():
     number_rundom = random.randrange(MIN_NUMBER, MAX_NUMBER)
-    answer = 'yes' if is_even(number_rundom) == 0 else 'no'
+    answer = 'yes' if is_even(number_rundom) else 'no'
     return str(number_rundom), str(answer)
