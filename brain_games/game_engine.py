@@ -1,5 +1,6 @@
 import prompt
 
+
 NUMBERS_ROUND = 3
 
 
@@ -8,9 +9,9 @@ def greet_user():
 
 
 def get_user_name():
-        user_name = prompt.string('May I have your name? ')
-        print(f"Hello, {user_name}!")
-        return user_name
+    user_name = prompt.string('May I have your name? ')
+    print(f"Hello, {user_name}!")
+    return user_name
 
 
 def run_game(game):
@@ -28,4 +29,3 @@ def run_game(game):
                   "\nLet's try again, {}!".format(answer, result, user_name))
             return
     print(f'Congratulations, {user_name}!')
-

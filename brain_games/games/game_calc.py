@@ -9,9 +9,9 @@ MAX_NUMBER = 50
 
 
 def round_game():
-        number_first = random.randrange(MIN_NUMBER, MAX_NUMBER)
-        number_second = random.randrange(MIN_NUMBER, MAX_NUMBER)
-        operation, symbol_operation = random.choice(OPERATIONS)
-        question = f'{number_first} {symbol_operation} {number_second}'
-        result = str(operation(number_first, number_second))
-        return question, result
+    number_first = random.randrange(MIN_NUMBER, MAX_NUMBER)
+    number_second = random.randrange(MIN_NUMBER, MAX_NUMBER)
+    operation, symbol_operation = random.choice(OPERATIONS)
+    question = f'{number_first} {symbol_operation} {number_second}'
+    result = str(operation(number_first, number_second))
+    return question, result
